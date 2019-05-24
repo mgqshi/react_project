@@ -1,0 +1,101 @@
+.evaluate-page{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    background: #F4F4F4;
+}
+
+//进度条
+.evaluate-progress-box{
+    width: 100%;
+    height: 40px;
+    background: #E9E9E9;
+    position: relative;
+    padding: 0 20px;
+}
+.evaluate-progress-text{
+    font-size:24px;
+    color:rgba(34,34,34,1);
+    line-height: 40px;
+    position: relative;
+    z-index: 2;
+}
+.evaluate-progress-text span{
+    float: right;
+}
+.evaluate-progress-now{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #28BC9A;
+    z-index: 0;
+}
+
+//评测项目
+.evaluate-item{
+    width:710px;
+    padding: 30px 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background:rgba(255,255,255,1);
+    border-radius:8px;
+}
+.evaluate-item-box{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+.evaluate-item-title{
+    width: calc(~'100% - 38px');
+    font-size: 30px;
+    font-weight: 600;
+    color:rgba(34,34,34,1);
+    line-height: 40px;
+}
+.evaluate-item-title span{
+    font-size:26px;
+    color:rgba(153,153,153,1);
+    float: right;
+    font-weight: 100;
+}
+.evaluate-item-right{
+    width: 21px;
+    height: 10px;
+    margin-top: 15px;
+    margin-left: 17px;
+    background: #28BC9A;
+}
+.evaluate-item-checkbox{
+    width:100%;
+    height:80px;
+    margin-top: 20px;
+    padding-left: 20px;
+    background:rgba(244,244,244,1);
+    border-radius:10px;
+    font-size:26px;
+    color:#222222;
+    line-height:80px;
+}
+
+//提交按钮
+.evaluate-submit{
+    width:100%;
+    height:140px;
+    background:rgba(255,255,255,1);
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.evaluate-submit-btn{
+    width:100%;
+    height:100px;
+    background:rgba(245,65,65,1);
+    border-radius:10px;
+    text-align: center;
+    font-size:30px;
+    color:rgba(255,255,255,1);
+    line-height:100px;
+}

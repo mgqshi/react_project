@@ -3,7 +3,7 @@ import { createStore, applyMiddleware } from "redux"
 import thunk from "redux-thunk"
 
 //路由标题修改
-import router_data from './router_redux'
+import { router_data } from './router_redux'
 
 let Reducer  = combineReducers({
     router_data

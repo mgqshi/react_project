@@ -1,17 +1,13 @@
 .home-page{
     width: 100%;
     height: 100%;
+    background: #f0f0f0;
 }
 .home-swiper{
     width: 100%;
-    height: 470px;
+    height: 400px;
     overflow: hidden;
-}
-.home-text{
-    font-size: 32px;
-    text-align: center;
-    line-height: 80px;
-    color: red;
+    position: relative;
 }
 
 .item {
@@ -19,8 +15,170 @@
     color: #666;
     box-sizing: border-box;
 }
-
 .item img{
     height: 100%;
     width: auto;
+}
+//导航样式
+.home-nav{
+    width: 100;
+    height: 160px;
+    padding-top: 20px;
+    display: flex;
+    background: #fff;
+}
+.nav-item{
+    width: 20%;
+    height: 100%;
+}
+.nav-img{
+    width: 86px;
+    height: 86px;
+    border-radius: 26px;
+    margin: 0 auto;
+    background: #FFD8B9;
+}
+.nav-title{
+    width: 100%;
+    text-align: center;
+    line-height: 54px;
+    font-size: 24px;
+    font-family: 'SourceHanSansCN-Light';
+    font-weight: 300;
+    color:#666666;
+}
+
+//活动专区样式
+.home-active{
+    width: 100%;
+    height: 535px;
+    padding: 30px;
+    background: #fff;
+    margin-top: 20px;
+}
+.active-one{
+    width: 100%;
+    height: 135px;
+    background: orange;
+}
+.active-two{
+    width: 100%;
+    height: 310px;
+    margin-top: 30px;
+    display: flex;
+}
+.active-three{
+    width: 340px;
+    height: 100%;
+    background: orange;
+}
+.active-four{
+    width: 340px;
+    height: 100%;
+    margin-left: 10px;
+}
+.active-five{
+    width: 100%;
+    height: 150px;
+    background: orange;
+}
+.active-six{
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    background: orange;
+}
+
+//猜你喜欢模块
+.home-like{
+    width: 100%;
+    margin-top: 20px;
+    background: #f0f0f0;
+}
+.like-header{
+    width: 100%;
+    height: 80px;
+    padding: 0 30px;
+    background: #fff;
+    display: flex;
+}
+.like-title{
+    width: calc(~'100% - 444px');
+    height: 100%;
+    font-size: 30px;
+    font-family: 'SourceHanSansCN-Regular';
+    font-weight: 400;
+    color:rgba(34,34,34,1);
+    line-height: 80px;
+}
+.like-choose{
+    width: 444px;
+    height: 100%;
+}
+.like-choose ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.like-choose ul li{
+    width: 60px;
+    height: 100%;
+}
+.like-choose ul li+li{
+    margin-left: 68px;
+}
+.like-choose ul li span{
+    display: inline-block;
+    height: 100%;
+    font-size: 30px;
+    font-family: 'SourceHanSansCN-Normal';
+    font-weight: 400;
+    color:rgba(153,153,153,1);
+    line-height: 80px;
+}
+.like-choose ul li span.active{
+    border-bottom: 4px solid #28BC9A;
+}
+
+.like-list{
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.phone-item{
+    width: 340px;
+    height: 490px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+.phone-item:nth-child(2n){
+    margin-left: 10px;
+}
+.phone-img{
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: orange;
+}
+.phone-descri{
+    width: 100%;
+    margin-top: 18px;
+    padding: 0 45px 0 19px;
+    font-size:26px;
+    font-family:'SourceHanSansCN-Regular';
+    font-weight:400;
+    color:rgba(34,34,34,1);
+    line-height:30px;
+}
+.phone-price{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 45px 0 19px;
+    font-size:36px;
+    font-family:'SourceHanSansCN-Regular';
+    font-weight:400;
+    color:rgba(245,65,65,1);
 }

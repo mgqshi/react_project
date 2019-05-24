@@ -1,16 +1,7 @@
 import React,{ Component } from 'react';
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import store from '../reducer/index'
 import { router_title } from '../reducer/actions'
- 
-//函数式组件的写法
-// let Authuser = ({component:Component,...rest})=>{
-//     return  <Route {...rest} render={(props)=>{
-//         return   Math.random() <0.5 ? <Component {...props}/> : <Redirect to='/login' />
-       
-//     }}/>
-// }
- 
  
 //类组件的写法
 class Authuser extends Component{
@@ -49,8 +40,6 @@ class Authuser extends Component{
         //设置网页头部标题,nav底部图片,利用redux进行数据响应
         store.dispatch(router_title(this.props.title,this.props.path));
         
-
-
         let { component:Component,...rest } = this.props;
         
         //解构组件身上的props，将component单独拿出来，如果条件满足，则允许进入该component，将剩余参数放入rest，rest是一个对象

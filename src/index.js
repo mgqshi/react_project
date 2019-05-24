@@ -1,21 +1,34 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
 import * as serviceWorker from './serviceWorker'
-import { BrowserRouter } from "react-router-dom"
+import { Router } from "react-router-dom"
 //rem
 import 'lib-flexible'
 // redux
 import { Provider } from "react-redux"
+import store  from "./reducer/index"
+//appjs
+import MainHeader from '@/components/main-header'
+import MainFooter from '@/components/main-footer'
+//路由入口
+import RouteApp from '@/routers/router'
+import history from '@/routers/history';
 
-import store from "./reducer/index"
+require('./statics/css/app.less')
+
 
 ReactDOM.render(
     <Provider store = { store } >
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <Router history={history}>
+        <div className="page-wrap">
+            <MainHeader isShow={ true } />
+            <div className="page-main" id="main-page">
+                <RouteApp />
+            </div>
+            <MainFooter />
+        </div>
+        </Router>
     </Provider>,
      document.getElementById('root'));
 

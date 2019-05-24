@@ -1,42 +1,42 @@
+//废弃页面
 import React,{Component} from 'react'
 import MainHeader from '@/components/main-header'
 import MainFooter from '@/components/main-footer'
 //路由入口
-import RouterOne from '@/routers/router'
+import RouteApp from '@/routers/router'
 //redux状态
 import { connect } from 'react-redux'
-
+//全局app样式
 require('./statics/css/app.less')
 
+
 class App extends Component{
+  
   render () {
     let { path } = this.props;
-    //如何页面有底部导航栏
-    if( path === '/home' || path === '/classification' || path === '/shop_cart' || path === '/my'){
-        //如果是首页,则头部透明
-        let page_class = 'page-main';
-        if(path === '/home'){
-          page_class = 'page-main-home'
+    let mainClass = "page-main-1",footStr = '';
+    //没有头部的页面
+    const noHeader = ['/home', '/classification', '/recover', '/my', '/shop_cart'];
+    if( noHeader.indexOf(path) > -1 ){
+        mainClass = 'page-main-home';
+        footStr = <MainFooter />;
+        if( path === '/shop_cart' ){
+          mainClass = 'page-main'
         }
-        return (
-          <div className="page-wrap">
-            <MainHeader isShow={ true } />
-            <main className={ page_class } >
-                <RouterOne />
-            </main>
-            <MainFooter/>
-          </div>
-        )
     }else{
-      //无底部导航栏情况
-      return <div className="page-wrap">
-        <MainHeader isShow={ true } />
-          <main className="page-main-1">
-              <RouterOne />
-          </main>
-      </div>
+        mainClass = "page-main-1";
+        footStr = '';
     }
-    
+
+    return (
+      <div className="page-wrap">
+        <MainHeader isShow={ true } />
+        <div className={mainClass}>
+          <RouteApp />
+        </div>
+        {footStr}
+      </div>
+    )
   }
 }
 

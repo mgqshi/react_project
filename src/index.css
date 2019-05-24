@@ -17,6 +17,7 @@ code {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: 'SourceHanSansCN-Medium';
 }
 
 #root,html,body{

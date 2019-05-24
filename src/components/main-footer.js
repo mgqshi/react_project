@@ -44,11 +44,22 @@ class NavItem extends Component{
  */
 class Footer extends Component{
     render (){
+        let { path } = this.props;
+        
+        let footClass = 'foot-box';
+        //需要隐藏头部的路由数组
+        const noHeader = ['/home', '/classification', '/recover', '/my', '/shop_cart']
+        //如果需要隐藏页面的
+        if(noHeader.indexOf(path)>-1){
+            footClass = "foot-box";
+        }else{
+            footClass = "foot-box-none";
+        }
         return (
             <div className="foot-box">
                 <NavItem self_path={ '/home' } path={ this.props.path } img_src={ "home.png" } img_src_hover={ "home_hover.png" } title={ "首页" } />
                 <NavItem self_path={ '/classification' } path={ this.props.path } img_src={ "fenlei.png" } img_src_hover={ "fenlei_hover.png" } title={ "分类" } />
-                <NavItem self_path={ '/classification' } path={ this.props.path } img_src={ "fenlei.png" } img_src_hover={ "fenlei_hover.png" } title={ "回收" } />
+                <NavItem self_path={ '/recover' } path={ this.props.path } img_src={ "fenlei.png" } img_src_hover={ "fenlei_hover.png" } title={ "回收" } />
                 <NavItem self_path={ '/shop_cart' } path={ this.props.path } img_src={ "shop_cart.png" } img_src_hover={ "shop_cart_hover.png" } title={ "购物车" } />
                 <NavItem self_path={ '/my' } path={ this.props.path } img_src={ "user.png" } img_src_hover={ "user_hover.png" } title={ "我的" } />
             </div>

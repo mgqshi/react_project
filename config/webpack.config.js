@@ -294,6 +294,7 @@ module.exports = function(webpackEnv) {
         '@pageCss': resolvePath('src/statics/css/pages'),
         '@componentCss': resolvePath('src/statics/css/components'),
         '@img': resolvePath('src/statics/images'),
+        '@utils': resolvePath('src/utils'),
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

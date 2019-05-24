@@ -1,5 +1,6 @@
+
 //路由动态管理数据
-export default function router_data(state = {
+const router_data =  function(state = {
     title : '爱趣换,一家专注于二手机的平台'
 },action){
     switch (action.type){
@@ -12,4 +13,24 @@ export default function router_data(state = {
         default:
             return state;
     }
+}
+
+//储存的路由信息,便于路由跳转
+// const $route =  function(state = {
+//     $route : null
+// },action){
+//     switch (action.type){
+//         case 'ROUTE_HISTORY':
+//             console.log(action);
+//             return {
+//                 ...action.$route
+//             };
+//         default:
+//             return state;
+//     }
+// }
+
+export {
+    router_data,
+    // $route
 }
